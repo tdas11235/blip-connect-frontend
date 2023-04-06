@@ -247,7 +247,9 @@ export function NavbarButton({ name, handleClick, icon, index }) {
       onClick={() => handleClick()}
       sx={{
         display: "flex",
-        color: cur === name?.toLowerCase() ? "rgba(213, 201, 187, 1)" : "white",
+        color: cur === name?.toLowerCase() ? "black" : "white",
+        backgroundColor:
+          cur === name?.toLowerCase() ? "rgba(213, 201, 187, 1)" : null,
         fontSize: "0.9rem",
         fontWeight: MD ? "200" : "400",
         padding: "7px 5px",
