@@ -1,0 +1,28 @@
+.blip-connect {
+    text-transform: uppercase;
+    color: #cdcdcd;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.blip-connect:hover {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 230px !important;
+    transform: translateX(-150px); 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-list-width:hover {
+    color: red;
+}
