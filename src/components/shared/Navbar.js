@@ -142,6 +142,7 @@ export default function Header() {
                 anchor={"right"}
                 open={cart}
                 onClose={toggleDrawer}
+                variant={"persistent"}
                 PaperProps={{
                   sx: {
                     backgroundColor: "rgba(213, 201, 187, 1)",
@@ -247,9 +248,12 @@ export function NavbarButton({ name, handleClick, icon, index }) {
       onClick={() => handleClick()}
       sx={{
         display: "flex",
-        color: cur === name?.toLowerCase() ? "black" : "white",
-        backgroundColor:
-          cur === name?.toLowerCase() ? "rgba(213, 201, 187, 1)" : null,
+        color: cur === name?.toLowerCase() ? "rgba(213, 201, 187, 1)" : "white",
+        backgroundColor: "#080808",
+        borderBottomStyle: "solid",
+        borderBottomWidth: cur === name?.toLowerCase() ? "1px" : "0px",
+        borderBottomColor:
+          cur === name?.toLowerCase() ? "rgba(213, 201, 187, 1)" : "black",
         fontSize: "0.9rem",
         fontWeight: MD ? "200" : "400",
         padding: "7px 5px",
@@ -257,7 +261,8 @@ export function NavbarButton({ name, handleClick, icon, index }) {
         letterSpacing: 1,
         textAlign: MD ? "start" : "center",
         ":hover": {
-          color: "rgba(213, 201, 187, 1)",
+          backgroundColor: "rgba(213, 201, 187, 1)",
+          color: "black",
         },
       }}
     >
